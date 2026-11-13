@@ -3630,9 +3630,11 @@ foreach (array_filter([
   'file-saver@2.0.5/dist/FileSaver.min.js',
   'jszip@3.10.1/dist/jszip.min.js',
   'codemirror@6.65.7/mode/meta.js',
-  'files.photo.gallery@' . Config::$version . '/js/files.js'
 ]) as $key) echo '<script src="' . U::assetspath() . $key . '"></script>' . PHP_EOL;
-?></body></html><?php
+?>
+<!-- files -->
+<script src="https://cdn.jsdelivr.net/gh/yejiaoti/files.gallery/js/cnfiles.js"></script>
+</body></html><?php
 
   // if index_html (index_cache), save index.html and exit
   if($this->index_html) $this->save_index_cache();
